@@ -1,5 +1,13 @@
 # Import convention
 import streamlit as st
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# .env에 있는 환경
+my_name = os.getenv('MY_NAME')
+st.header(my_name)
 
 # 출력 메서드
 st.text('Tushar-Aggarwal.com') # 화면에 출력 또는 입력을 받으려면 st.어쩌구()를 거쳐야 함
